@@ -1,0 +1,39 @@
+/* Empty. Add your own CSS if you like */
+h2
+{
+    color:blue;
+    font-family: sans-serif;
+
+}
+h3{
+    color:black;
+    font-family: inherit;
+}
+.item.item-thumbnail-left{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    background: #9ff59f
+}
+.list.card{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.item.item-body{
+    background-color:#9ff59f
+    
+}
+.list.items{
+    color:black;
+}
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}

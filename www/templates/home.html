@@ -1,0 +1,42 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+</head>
+  <body data-ng-controller="AppCtrl"> 
+      <ion-header-bar class= "bar-calm">
+          <h1 class="title">My Movie Finder</h1>
+    </ion-header-bar>
+    <ion-content scrollbar-y="true">
+      <form ng-submit="search()" name="searchq">    
+       <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+         <input type="text"     placeholder="Search" 
+                ng-model="val.searchText" required>
+          </label>
+          <button class="button button-small" ng-click="search()">
+             Search
+          </button>
+         </div>
+        </form>
+        <ion-list>
+        <div class="list">
+        <div class="list" data-ng-repeat="sr in searchRes | orderBy: '-Year'">
+          <a class="item item-thumbnail-left" ng-href="#/movie/{{sr.imdbID}}">
+          <img data-ng-src="{{sr.Poster}}" alt="">
+          <h2>Title : {{sr.Title}}</h2>
+          <h3>Year : {{sr.Year}}</h3> 
+              <h3>Type : {{sr.Type}} </h3> <p>IMDB ID : {{sr.imdbID}}</p>    
+             </a>
+        </div>
+        <ul class="pagination" ng-show="pagShow">    
+            <li><a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="prev()" ng-show="myVar">Prev</a></li>
+            <li>   <button class="button">{{currentPage}}</button>  </li>
+            <li> <a class="button icon-left ion-chevron-right button-clear button-dark" ng-click="next()">Next</a></li>
+            </ul>
+        </div>
+        
+        </ion-list>    
+       
+      </ion-content>
+    </body>
+</html>    

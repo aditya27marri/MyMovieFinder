@@ -1,0 +1,40 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+</head>
+  <body data-ng-controller="MovieCtrl"> 
+      <ion-header-bar class= "bar-calm">
+          <h1 class="title">My Movie Finder</h1>
+    </ion-header-bar>
+    <ion-content>
+     <div class="list card">
+
+      <div class="item item-avatar">
+      <img data-ng-src="{{sr.Poster}}">
+          <h4>Title : {{sr.Title}}</h2>
+      <p>Year : {{sr.Year}}</p>
+      </div>
+
+      <div class="item item-body">
+    <ion-list >
+          <p >
+           <ul class="list items" style="list-style-type:square">
+             <li> Director : {{sr.Director}}</li>
+             <li> Writer : {{sr.Writer}} </li>
+             <li> Actors : {{sr.Actors}}</li>
+             <li> Plot: {{sr.Plot}}</li>
+             <li> Language: {{sr.Language}}</li>
+             <li> Country: {{sr.Country}}</li>
+             <li> IMDB Rating: {{sr.imdbRating}}</li>
+           </ul>
+       </p>
+    <ion-list>
+          <p>
+            <h2>Released: {{sr.Released}}</h2>
+          </p>
+        </div>
+
+   </div>         
+    </ion-content>
+    </body>
+</html>    
